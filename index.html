@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Md. Shahriar Atik Shifat | Electrical Engineer & Cybersecurity</title>
+<meta name="description" content="Portfolio of Md. Shahriar Atik Shifat: Electrical Engineering & Automation graduate with experience in RF communication, digital signal processing and cybersecurity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10202e; --ink-soft:#4a5b6a; --paper:#f6f4ef; --card:#ffffff;
+  --line:#d9d5ca; --signal:#0b7a75; --noise:#c9552b; --deep:#0c1a26;
+  --head:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px}
+a{color:var(--signal);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--noise);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);line-height:1.15;letter-spacing:-.01em}
+
+/* nav */
+header{position:sticky;top:0;z-index:5;background:rgba(246,244,239,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 24px;max-width:1000px;margin:0 auto;flex-wrap:wrap}
+.brand{font-family:var(--head);font-weight:800;color:var(--ink);text-decoration:none;font-size:1.05rem}
+nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
+nav ul a{color:var(--ink-soft);text-decoration:none;font-size:.95rem;font-weight:500}
+nav ul a:hover{color:var(--signal)}
+
+/* hero */
+.hero{padding:72px 0 40px}
+.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,6vw,4.1rem);font-weight:800}
+.role{margin-top:14px;font-size:1.2rem;color:var(--signal);font-weight:600}
+.lead{margin-top:20px;max-width:56ch;color:var(--ink-soft)}
+.btns{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--ink);color:#fff}
+.btn:hover{background:var(--signal);border-color:var(--signal);color:#fff}
+.avatar{position:relative;width:min(280px,70vw);aspect-ratio:1;border-radius:50%;background:var(--deep);color:#fff;display:grid;place-items:center;font-family:var(--head);font-weight:800;font-size:4.2rem;justify-self:center;overflow:hidden;border:6px solid var(--card);box-shadow:0 0 0 2px var(--signal)}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* signature element: noisy signal to clean signal */
+.signal{margin:40px 0 0;background:var(--deep);border-radius:10px;padding:20px 24px 14px;color:#cfe3e1}
+.signal svg{width:100%;height:auto;display:block}
+.noisy{stroke:var(--noise);fill:none;stroke-width:2;opacity:.9}
+.clean{stroke:#4fd1c5;fill:none;stroke-width:3;stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 3.2s .4s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.signal p{font-size:.9rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:8px}
+.signal b.n{color:#f0916d}.signal b.c{color:#4fd1c5}
+@media (prefers-reduced-motion:reduce){.clean{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(1.7rem,3.5vw,2.3rem);margin-bottom:28px}
+.job{display:grid;grid-template-columns:200px 1fr;gap:12px 32px;margin-bottom:34px}
+.when{color:var(--ink-soft);font-size:.92rem}
+.job h3{font-size:1.25rem}
+.job .org{color:var(--signal);font-weight:600;margin-bottom:8px}
+ul.tight{padding-left:20px}
+ul.tight li{margin-bottom:6px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px}
+.card h3{font-size:1.2rem;margin-bottom:8px}
+.card .meta{font-size:.9rem;color:var(--ink-soft);margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;list-style:none}
+.tags li{font-size:.85rem;background:#e7efed;color:#0a4f4b;padding:4px 10px;border-radius:99px}
+.skill-group h3{font-size:1.1rem;margin-bottom:4px;color:var(--signal)}
+.stat{display:flex;gap:28px;flex-wrap:wrap;margin-bottom:12px}
+.stat div{font-size:.95rem;color:var(--ink-soft)}
+.stat strong{display:block;font-family:var(--head);font-size:1.7rem;color:var(--ink)}
+
+/* contact */
+.contact{background:var(--deep);color:#e8f1f0;border-top:0;padding:64px 0 40px}
+.contact h2{color:#fff}
+.contact a{color:#4fd1c5}
+.contact ul{list-style:none;display:grid;gap:10px;margin-bottom:36px}
+.contact small{color:#9db4b2}
+footer-note{display:block}
+
+@media (max-width:760px){
+  .hero-grid{grid-template-columns:1fr}
+  .avatar{order:-1;width:180px;font-size:3rem}
+  .job{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav aria-label="Main">
+    <a class="brand" href="#top">Shahriar Atik Shifat</a>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-grid">
+      <div>
+        <h1>Md. Shahriar Atik Shifat</h1>
+        <p class="role">Electrical engineer. RF, networks and cybersecurity.</p>
+        <p class="lead">I hold a B.Sc. in Electrical Engineering and Automation, and I turn technical findings into clear decisions for non-technical clients. I am looking for a business leadership path in telecom, where I can learn operations, customers and technology through rotation.</p>
+        <div class="btns">
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn" href="Md_Shahriar_Atik_Shifat_Resume.pdf" download>Download resume</a>
+        </div>
+      </div>
+      <div class="avatar" aria-label="Portrait of Shahriar">
+        MS
+        <img src="photo.jpg" alt="Md. Shahriar Atik Shifat" onerror="this.remove()">
+      </div>
+    </div>
+
+    <figure class="signal">
+      <svg viewBox="0 0 900 140" role="img" aria-label="A noisy signal and the same signal after filtering">
+        <path class="noisy" d="M0,70 L15,52 L30,95 L45,40 L60,88 L75,48 L90,100 L105,38 L120,84 L135,50 L150,96 L165,42 L180,90 L195,46 L210,98 L225,40 L240,86 L255,52 L270,94 L285,44 L300,92 L315,48 L330,98 L345,42 L360,88 L375,50 L390,96 L405,40 L420,90 L435,46 L450,100 L465,42 L480,86 L495,52 L510,94 L525,44 L540,92 L555,48 L570,98 L585,40 L600,88 L615,50 L630,96 L645,42 L660,90 L675,46 L690,100 L705,40 L720,86 L735,52 L750,94 L765,44 L780,92 L795,48 L810,98 L825,42 L840,88 L855,50 L870,96 L885,44 L900,70"/>
+        <path class="clean" d="M0,70 C56,10 112,10 168,70 S280,130 337,70 S449,10 506,70 S618,130 675,70 S787,10 843,70 S900,100 900,70"/>
+      </svg>
+      <p><span><b class="n">Orange:</b> RF signal with interference</span><span><b class="c">Teal:</b> the same signal after FIR/IIR filtering, the subject of my published paper</span></p>
+    </figure>
+  </div>
+</div>
+
+<section id="experience">
+<div class="wrap">
+  <h2>Experience</h2>
+
+  <article class="job">
+    <div class="when">Jan 2026 to present<br>Rajshahi, Bangladesh</div>
+    <div>
+      <h3>Assistant Teacher</h3>
+      <p class="org">Shikkha School and College</p>
+      <ul class="tight">
+        <li>Lead a class of 30 students in chemistry, planning lessons and adapting explanations to different learning levels.</li>
+        <li>Mentored students on two science projects, guiding experiment design, problem solving and presentation of results.</li>
+        <li>Teach ICT to primary-level students, building basic computer skills and digital literacy.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="job">
+    <div class="when">Feb 2025 to Mar 2025<br>Dhaka, Bangladesh</div>
+    <div>
+      <h3>Information Security Intern</h3>
+      <p class="org">Byte Capsule IT</p>
+      <ul class="tight">
+        <li>Ran web application penetration testing on a live client project and reduced identified vulnerabilities by 70%.</li>
+        <li>Used Burp Suite and Nmap for vulnerability scanning and remediation to protect sensitive client data.</li>
+        <li>Presented findings and risk recommendations to technical and non-technical clients, building trust through clear communication.</li>
+      </ul>
+    </div>
+  </article>
+</div>
+</section>
+
+<section id="projects">
+<div class="wrap">
+  <h2>Projects</h2>
+  <div class="grid">
+    <article class="card">
+      <h3>Color Image Encryption with Particle Swarm Optimization</h3>
+      <p class="meta">B.Sc. thesis, MATLAB</p>
+      <p>Designed an encryption scheme that combines PSO, a hyperchaotic system and SHA-256-derived keys to secure image transmission. It improved randomness, key sensitivity and resistance to attacks.</p>
+      <ul class="tags"><li>MATLAB</li><li>Cryptography</li><li>SHA-256</li></ul>
+    </article>
+    <article class="card">
+      <h3>Cats and Dogs</h3>
+      <p class="meta">Python project</p>
+      <p>Built an interactive code-breaking game in Python with game logic, input validation and error handling.</p>
+      <ul class="tags"><li>Python</li><li>Game logic</li></ul>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="research">
+<div class="wrap">
+  <h2>Research</h2>
+  <article class="card">
+    <h3>Design of Digital Filters for Noise Reduction in RF Communication Systems</h3>
+    <p class="meta">Novelty Journals, November 2024</p>
+    <p>Designed and simulated FIR and IIR filters to remove interference and improve signal clarity. Evaluated performance and tuned filter parameters to make RF communication more reliable.</p>
+    <ul class="tags"><li>DSP</li><li>FIR / IIR filters</li><li>RF systems</li></ul>
+  </article>
+</div>
+</section>
+
+<section id="skills">
+<div class="wrap">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card skill-group">
+      <h3>Telecom and technology</h3>
+      <p>RF communication systems, digital signal processing (FIR/IIR filters), networking (OSI, TCP/IP), network traffic analysis (tcpdump), automation systems, Linux, Python, MATLAB.</p>
+    </div>
+    <div class="card skill-group">
+      <h3>Cybersecurity and risk</h3>
+      <p>Information security risk awareness, vulnerability assessment, web application penetration testing, Burp Suite, Nmap, Suricata (intrusion detection), incident reporting, log analysis, cryptography.</p>
+    </div>
+    <div class="card skill-group">
+      <h3>Business and leadership</h3>
+      <p>Cross-functional collaboration, stakeholder communication, client presentations, problem solving, analytical thinking, learning agility, initiative, mentoring, cross-cultural teamwork.</p>
+    </div>
+  </div>
+
+  <h3 style="margin:36px 0 10px">Certifications</h3>
+  <ul class="tags">
+    <li>Google Cybersecurity (Google)</li>
+    <li>Encryption and Cryptography Essentials (Coursera)</li>
+    <li>Ethical Hacker (Cisco)</li>
+    <li>Advanced Web Application Security Testing (Byte Capsule)</li>
+    <li>Artificial Intelligence Fundamentals (IBM)</li>
+    <li>Networking Basics (Cisco)</li>
+    <li>Python Essentials 1 (Cisco)</li>
+  </ul>
+</div>
+</section>
+
+<section id="education">
+<div class="wrap">
+  <h2>Education and activities</h2>
+  <div class="stat">
+    <div><strong>3.48 / 5.00</strong>GPA, B.Sc. Electrical Engineering</div>
+    <div><strong>3 times</strong>University Stipend for academic excellence</div>
+    <div><strong>5.00 / 5.00</strong>GPA in both SSC and HSC</div>
+  </div>
+  <article class="job" style="margin-top:28px">
+    <div class="when">Sep 2020 to Jul 2024<br>Zhenjiang, Jiangsu, China</div>
+    <div>
+      <h3>Jiangsu University of Science and Technology</h3>
+      <p class="org">B.Sc., Electrical Engineering and Automation Technology</p>
+      <p>Focused on automation systems, programming and applied research. Took part in international student activities, working across cultures and teams.</p>
+    </div>
+  </article>
+  <article class="job">
+    <div class="when">2017 to 2019<br>Khilgaon, Dhaka</div>
+    <div>
+      <h3>National Ideal College</h3>
+      <p class="org">Higher Secondary Certificate, Science</p>
+    </div>
+  </article>
+  <article class="job">
+    <div class="when">2017<br>Motijheel, Dhaka</div>
+    <div>
+      <h3>Motijheel Model School and College</h3>
+      <p class="org">Secondary School Certificate, Science</p>
+    </div>
+  </article>
+  <article class="card">
+    <h3>Cricket for Ward No. 10</h3>
+    <p>Represented Ward No. 10 in the Dhaka North City Corporation Mayor Cup in 2022 and 2023 as wicket-keeper and opening batsman, building teamwork, communication and quick decision-making.</p>
+  </article>
+</div>
+</section>
+</main>
+
+<section id="contact" class="contact">
+<div class="wrap">
+  <h2>Contact</h2>
+  <ul>
+    <li>Email: <a href="mailto:shahriar.atik.shifat@gmail.com">shahriar.atik.shifat@gmail.com</a></li>
+    <li>WhatsApp: <a href="https://wa.me/8801875283274">+880 1875-283274</a></li>
+    <li>LinkedIn: <a href="https://linkedin.com/in/shahriar-atik-shifat">linkedin.com/in/shahriar-atik-shifat</a></li>
+    <li>Writing: <a href="https://medium.com/@shahriar.atik">medium.com/@shahriar.atik</a></li>
+    <li>Location: Rajshahi, Bangladesh</li>
+  </ul>
+  <small>&copy; 2026 Md. Shahriar Atik Shifat</small>
+</div>
+</section>
+
+</body>
+</html>
